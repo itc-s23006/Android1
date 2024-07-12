@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Screen component samples</string>
+    <string name="tv_msg">Please enter your name.</string>
+    <string name="bt_save">Save</string>
+    <string name="cb_food">Foods</string>
+    <string name="cb_drink">Drinks</string>
+</resources>
