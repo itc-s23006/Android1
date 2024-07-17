@@ -4,4 +4,30 @@
     <string name="bt_save">Save</string>
     <string name="cb_food">Foods</string>
     <string name="cb_drink">Drinks</string>
+    <string name="rb_male">Male</string>
+    <string name="rb_female">Female</string>
+
+    <string-array name="sp_curry_list">
+        <item>Dry Curry</item>
+        <item>Curry with pork cutlet</item>
+        <item>Beef Curry</item>
+        <item>Chicken Curry</item>
+        <item>Seafood Curry</item>
+        <item>Keema Curry</item>
+        <item>Green Curry</item>
+    </string-array>
+
+    <string-array name="lv_cocktail_list">
+        <item>White Lady</item>
+        <item>Balalaika</item>
+        <item>X\u00b7Y\u00b7Z</item>
+        <item>New York</item>
+        <item>Manhattan</item>
+        <item>Mississippi Mule</item>
+        <item>Blue Hawaii</item>
+        <item>Mai-Tai</item>
+        <item>Martini</item>
+        <item>Blue Moon</item>
+        <item>Mojito</item>
+    </string-array>
 </resources>
