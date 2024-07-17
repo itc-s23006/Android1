@@ -85,17 +85,17 @@
         android:paddingTop="8dp"
         android:paddingBottom="8dp" />
 
+    <Button
+        android:id="@+id/btSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bt_save" />
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="#FFFFFF"
         android:entries="@array/lv_cocktail_list" />
-
-    <Button
-        android:id="@+id/btSave"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/bt_save" />
 
 </LinearLayout>
