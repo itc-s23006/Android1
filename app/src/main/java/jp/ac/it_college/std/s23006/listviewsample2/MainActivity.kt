@@ -33,5 +33,12 @@ class MainActivity : AppCompatActivity() {
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, menuList)
         // リストビューにアダプタオブジェクトを設定
         binding.lvMenu.adapter = adapter
+
+        binding.lvMenu.setOnItemClickListener { _, _, _, _ ->
+
+            val dialogFragment = OrderConfirmDialogFragment()
+
+            dialogFragment.show(supportFragmentManager, "OrderConfigDialogFragment")
+        }
     }
 }
