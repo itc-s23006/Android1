@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import jp.ac.it_college.std.s23006.constraintlayoutsample.databinding.ActivityMainBinding
+import jp.ac.it_college.std.s23006.constraintlayoutsample.databinding.ActivitySecondBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
