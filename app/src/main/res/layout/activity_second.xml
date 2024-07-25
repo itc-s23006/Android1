@@ -38,7 +38,7 @@
         android:inputType="text|textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_min="48dp"
-        app:layout_constraintStart_toEndOf="@+id/sName"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/sTitle" />
 
     <TextView
@@ -63,7 +63,7 @@
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_min="48dp"
-        app:layout_constraintStart_toEndOf="@+id/sMail"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/seName" />
 
     <TextView
@@ -93,4 +93,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sComment" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="120dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
