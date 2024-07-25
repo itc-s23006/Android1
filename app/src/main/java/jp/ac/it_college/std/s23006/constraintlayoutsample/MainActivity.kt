@@ -11,11 +11,13 @@ import jp.ac.it_college.std.s23006.constraintlayoutsample.databinding.ActivityMa
 import jp.ac.it_college.std.s23006.constraintlayoutsample.databinding.ActivitySecondBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+    // private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivitySecondBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        // binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivitySecondBinding.inflate(layoutInflater)
         enableEdgeToEdge()
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
