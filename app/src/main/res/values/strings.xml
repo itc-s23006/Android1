@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RecyclerViewSample</string>
+    <string name="currency_unit">Yen</string>
 </resources>
