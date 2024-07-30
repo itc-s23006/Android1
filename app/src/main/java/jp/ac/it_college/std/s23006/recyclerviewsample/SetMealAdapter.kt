@@ -7,17 +7,21 @@ import jp.ac.it_college.std.s23006.recyclerviewsample.databinding.SetMealRowBind
 
 // RecyclerView が扱うデータを管理するクラス。
 // 必ず RecyclerView.Adapter を継承する必要がある。
-class SetMealAdapter(private val data: List<SetMeal>) :
-    RecyclerView.Adapter<SetMealAdapter.ViewHolder>() {
+class SetMealAdapter(private val data: List<SetMeal>,
+                     private val onItemSelected: (item: SetMeal) -> Unit
+) : RecyclerView.Adapter<SetMealAdapter.ViewHolder>() {
 
     // RecyclerView が表示時に使う1件分のデータを表示するためのビューを管理するクラス
     // 必ず RecyclerView.ViewHolder を継承する必要がある。
     // ViewBinding と役割が似てるので、可能な限り ViewBinding に乗っかった形で実装したパターン。
     class ViewHolder(private val binding: SetMealRowBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: SetMeal) {
+        fun bind(item: SetMeal, callback: (item: SetMeal) -> Unit) {
             binding.name.text = item.name
             binding.price.text = item.price.toString()
+            binding.root.setOnClickListener {
+                callback(item)
+            }
         }
     }
 
@@ -37,6 +41,6 @@ class SetMealAdapter(private val data: List<SetMeal>) :
     // パラメータの position に何番目のデータを表示するべきかの値が渡される。
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = data[position]
-        holder.bind(item)
+        holder.bind(item, onItemSelected)
     }
 }

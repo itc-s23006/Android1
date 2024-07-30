@@ -1,6 +1,7 @@
 package jp.ac.it_college.std.s23006.recyclerviewsample
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -31,7 +32,13 @@ class MainActivity : AppCompatActivity() {
             val linearLayoutManager = LinearLayoutManager(this@MainActivity)
             layoutManager = linearLayoutManager
 
-            val setMealAdapter = SetMealAdapter(setMealList)
+            val setMealAdapter = SetMealAdapter(setMealList) { item ->
+                Toast.makeText(
+                    this@MainActivity,
+                    "選択された定食: ${item.name}",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
             adapter = setMealAdapter
 
             addItemDecoration(
