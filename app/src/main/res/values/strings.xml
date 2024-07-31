@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">IntelSample</string>
+    <string name="currency_unit">Yen</string>
+    <string name="tv_thx_title">OrderCompleted</string>
+    <string name="tv_thx_desc">Of The Menu Below</string>
+    <string name="bt_thx_back">Return to List</string>
+</resources>
