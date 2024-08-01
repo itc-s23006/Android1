@@ -1,14 +1,15 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.jetbrains.kotlinx.serialization)
 }
 
 android {
-    namespace = "jp.ac.it_college.std.s23006.menusample"
+    namespace = "jp.ac.it_college.std.s23006.intelsample"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "jp.ac.it_college.std.s23006.menusample"
+        applicationId = "jp.ac.it_college.std.s23006.intelsample"
         minSdk = 29
         targetSdk = 34
         versionCode = 1
@@ -33,6 +34,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -42,6 +46,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.kotlinx.serialization.json)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
