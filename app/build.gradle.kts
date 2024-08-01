@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "jp.ac.it_college.std.s23006.intelsample"
+    namespace = "jp.ac.it_college.std.s23006.menusample"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "jp.ac.it_college.std.s23006.intelsample"
+        applicationId = "jp.ac.it_college.std.s23006.menusample"
         minSdk = 29
         targetSdk = 34
         versionCode = 1
@@ -36,6 +36,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        dataBinding = true
     }
 }
 

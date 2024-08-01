@@ -1,4 +1,4 @@
-package jp.ac.it_college.std.s23006.intelsample
+package jp.ac.it_college.std.s23006.menusample
 
 import kotlinx.serialization.Serializable
 

@@ -1,9 +1,9 @@
-package jp.ac.it_college.std.s23006.intelsample
+package jp.ac.it_college.std.s23006.menusample
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import jp.ac.it_college.std.s23006.intelsample.databinding.SetMealRowBinding
+import jp.ac.it_college.std.s23006.menusample.databinding.SetMealRowBinding
 
 // RecyclerView が扱うデータを管理するクラス。
 // 必ず RecyclerView.Adapter を継承する必要がある。

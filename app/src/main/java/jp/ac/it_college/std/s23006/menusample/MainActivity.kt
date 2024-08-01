@@ -1,4 +1,4 @@
-package jp.ac.it_college.std.s23006.intelsample
+package jp.ac.it_college.std.s23006.menusample
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,7 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import jp.ac.it_college.std.s23006.intelsample.databinding.ActivityMainBinding
+import jp.ac.it_college.std.s23006.menusample.databinding.ActivityMainBinding
 import kotlinx.serialization.json.Json
 
 class MainActivity : AppCompatActivity() {
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         binding.lvMenu.apply {
             val linearLayoutManager = LinearLayoutManager(this@MainActivity)
             layoutManager = linearLayoutManager
-            val SetMealAdapter = SetMealAdapter(setMealList) { item ->
+            val setMealAdapter = SetMealAdapter(setMealList) { item ->
                 Toast.makeText(
                     this@MainActivity,
                     "選択された定食: ${item.name}",
