@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MenuSample</string>
+    <string name="app_name">Menu Sample</string>
     <string name="tv_menu_unit">Yen</string>
     <string name="menu_list_options_teishoku">SetMeal</string>
     <string name="menu_list_options_curry">Curry</string>

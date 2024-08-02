@@ -1,6 +1,7 @@
 package jp.ac.it_college.std.s23006.menusample
 
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -20,15 +21,26 @@ class MenuThanksActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        // ビューの初期化
+        binding.apply {
+            // ツールバー
+            setSupportActionBar(toolbar2)
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val menuName = intent.getStringExtra("menuName")
-        val menuPrice = intent.getIntExtra("menuPrice", 0)
+            // メニューの名前と価格をセット
+            tvMenuName.text = intent.getStringExtra("menuName") ?: "名無しのメニュー"
+            tvMenuPrice.text = intent.getIntExtra("menuPrice", 0).toString()
 
-        binding.tvMenuName.text = menuName
-        binding.tvMenuPrice.text = menuPrice.toString()
+        }
+    }
 
-        binding.btThxBack.setOnClickListener {
-            finish()
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                finish()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
         }
     }
 }
