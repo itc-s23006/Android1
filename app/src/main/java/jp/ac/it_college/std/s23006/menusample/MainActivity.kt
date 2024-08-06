@@ -2,8 +2,10 @@ package jp.ac.it_college.std.s23006.menusample
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.ContextMenu
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -61,7 +63,18 @@ class MainActivity : AppCompatActivity() {
                     startActivity(this)
                 }
             }
+            registerForContextMenu(this)
         }
+    }
+
+    override fun onCreateContextMenu(
+        menu: ContextMenu?,
+        v: View?,
+        menuInfo: ContextMenu.ContextMenuInfo?
+    ) {
+        super.onCreateContextMenu(menu, v, menuInfo)
+        menuInflater.inflate(R.menu.menu_context_menu_list, menu)
+        menu?.setHeaderTitle(R.string.menu_list_context_header)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
