@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.commit
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import jp.ac.it_college.std.s23006.fragmentsample.databinding.FragmentMenuListBinding
@@ -51,6 +52,20 @@ class MenuListFragment : Fragment() {
     }
 
     private fun order(item: FoodMenu) {
-        // 後で記述する
+        val bundle = Bundle().apply {
+            putString("menuName", item.name)
+            putInt("menuPrice", item.price)
+        }
+
+        // フラグメントの切り替え。フラグメントマネージャを使います。
+        // fragment-ktx ライブラリを使って、ラムダ式でトランザクション内容を簡潔に記述できるようにする。
+        parentFragmentManager.commit {
+            // トランザクションが正しく動作するように設定。
+            setReorderingAllowed(true)
+            // 現在の表示内容をバックスタックに追加
+            addToBackStack("Only List")
+            // 注文完了フラグメントに切り替え
+            replace(R.id.fragmentMainContainer, MenuThanksFragment::class.java, bundle)
+        }
     }
 }
