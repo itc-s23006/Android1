@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.commit
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import jp.ac.it_college.std.s23006.fragmentsample.databinding.FragmentMenuListBinding
@@ -56,7 +55,7 @@ class MenuListFragment : Fragment() {
             putString("menuName", item.name)
             putInt("menuPrice", item.price)
         }
-
+        /* // 旧式
         // フラグメントの切り替え。フラグメントマネージャを使います。
         // fragment-ktx ライブラリを使って、ラムダ式でトランザクション内容を簡潔に記述できるようにする。
         parentFragmentManager.commit {
@@ -67,5 +66,9 @@ class MenuListFragment : Fragment() {
             // 注文完了フラグメントに切り替え
             replace(R.id.fragmentMainContainer, MenuThanksFragment::class.java, bundle)
         }
+         */
+        // お行儀よく新しい方法でフラグメント切り替えする。
+        // フラグメントマネージャを通じてアクティビティに結果を返す。
+        parentFragmentManager.setFragmentResult("selectedMenu", bundle)
     }
 }

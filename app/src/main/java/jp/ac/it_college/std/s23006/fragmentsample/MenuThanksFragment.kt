@@ -32,11 +32,16 @@ class MenuThanksFragment : Fragment() {
 
             // 戻るボタンのクリックイベント
             btThxBack.setOnClickListener {
+                // 旧式
                 // フラグメントのスタック履歴の1個前へ戻る
-                parentFragmentManager.popBackStack()
+                // parentFragmentManager.popBackStack()
+
+                // お行儀よくアクティビティへ結果を返す。
+                parentFragmentManager.setFragmentResult(
+                    "backToList", Bundle()
+                )
             }
         }
-
     }
 
     override fun onDestroyView() {
